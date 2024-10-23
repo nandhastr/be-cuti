@@ -6,7 +6,7 @@
             <div class="inner">
                 <h3>50</h3>
 
-                <p>Data Cuto</p>
+                <p>Data Cut</p>
             </div>
             <div class="icon">
                 <i class="ion ion-bag"></i>
