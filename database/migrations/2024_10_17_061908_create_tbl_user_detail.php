@@ -13,17 +13,14 @@ return new class extends Migration
     {
         Schema::create('tbl_user_detail', function (Blueprint $table) {
             $table->id('id_user_detail');
-            $table->string('nama', 30)->nullable();
-            $table->unsignedBigInteger('id_jns_kelamin')->nullable();
-            $table->string('no_telp', 30)->nullable();
-            $table->text('alamat')->nullable();
             $table->string('nip', 50)->nullable();
-            $table->string('devisi', 50)->nullable();
+            $table->string('nama', 30)->nullable();
+            $table->enum('gender', ['Laki-laki', 'Perempuan']);
+            $table->string('no_telp', 30)->nullable();
+            $table->string('divisi', 50)->nullable();
             $table->string('jabatan', 50)->nullable();
+            $table->text('alamat')->nullable();
             $table->timestamps();
-
-            // Relasi dengan tabel jenis_kelamin
-            $table->foreign('id_jns_kelamin')->references('id_jns_kelamin')->on('tbl_jenis_kelamin')->onDelete('cascade');
         });
     }
 
